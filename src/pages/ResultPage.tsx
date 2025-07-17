@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useLocation, useNavigate, Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Download, RefreshCw, ArrowLeft, Share2, Heart, Sparkles } from 'lucide-react';
+import { SmartLink } from '../components/SmartLink';
 
 export const ResultPage = () => {
   const location = useLocation();
@@ -16,12 +17,12 @@ export const ResultPage = () => {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">No Result Found</h1>
           <p className="text-gray-600 mb-8">Please generate a coloring page first.</p>
-          <Link
+          <SmartLink
             to="/create"
             className="px-6 py-3 bg-gradient-to-r from-coral-500 to-purple-500 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300"
           >
             Create New Page
-          </Link>
+          </SmartLink>
         </div>
       </div>
     );
@@ -187,24 +188,24 @@ export const ResultPage = () => {
             <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
               <h3 className="font-semibold text-gray-900 mb-4">Quick Actions</h3>
               <div className="space-y-3">
-                <Link
+                <SmartLink
                   to="/create"
                   className="block w-full py-2 px-4 text-center bg-mint-50 text-mint-700 rounded-lg hover:bg-mint-100 transition-colors duration-200"
                 >
                   Create Another Page
-                </Link>
-                <Link
+                </SmartLink>
+                <SmartLink
                   to="/templates"
                   className="block w-full py-2 px-4 text-center bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors duration-200"
                 >
                   Browse Templates
-                </Link>
-                <Link
+                </SmartLink>
+                <SmartLink
                   to="/history"
                   className="block w-full py-2 px-4 text-center bg-coral-50 text-coral-700 rounded-lg hover:bg-coral-100 transition-colors duration-200"
                 >
                   View History
-                </Link>
+                </SmartLink>
               </div>
             </div>
 

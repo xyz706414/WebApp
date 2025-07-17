@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { User, UserPlus, Sparkles, ArrowRight } from 'lucide-react';
+import { SmartLink } from '../components/SmartLink';
 
 export const OnboardingPage = () => {
   return (
@@ -36,7 +36,7 @@ export const OnboardingPage = () => {
           {/* Options */}
           <div className="space-y-4">
             {/* Create Account */}
-            <Link
+            <SmartLink
               to="/signup"
               className="group relative block w-full bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:bg-white hover:border-coral-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
@@ -69,10 +69,10 @@ export const OnboardingPage = () => {
                   <span>Access creation history</span>
                 </div>
               </div>
-            </Link>
+            </SmartLink>
 
             {/* Continue Without Account */}
-            <Link
+            <SmartLink
               to="/create"
               className="group relative block w-full bg-white/60 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:bg-white/80 hover:border-mint-200 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
@@ -105,7 +105,7 @@ export const OnboardingPage = () => {
                   <span>Create account later to save progress</span>
                 </div>
               </div>
-            </Link>
+            </SmartLink>
           </div>
 
           {/* Benefits */}
@@ -139,12 +139,12 @@ export const OnboardingPage = () => {
           <div className="text-center">
             <p className="text-gray-600">
               Already have an account?{' '}
-              <Link
+              <SmartLink
                 to="/login"
                 className="text-coral-600 font-medium hover:text-coral-700 transition-colors duration-200"
               >
                 Sign in here
-              </Link>
+              </SmartLink>
             </p>
           </div>
         </div>

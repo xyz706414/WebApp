@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Search, Filter, Grid, List, Star, Download, Eye } from 'lucide-react';
+import { SmartLink } from '../components/SmartLink';
 
 export const TemplatesPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -237,13 +237,13 @@ export const TemplatesPage = () => {
                 </div>
 
                 <div className="flex space-x-3">
-                  <Link
+                  <SmartLink
                     to="/create"
                     state={{ template }}
                     className="flex-1 py-2 px-4 bg-gradient-to-r from-coral-500 to-purple-500 text-white rounded-lg font-medium text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                   >
                     Use Template
-                  </Link>
+                  </SmartLink>
                   <button className="py-2 px-4 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200">
                     Preview
                   </button>

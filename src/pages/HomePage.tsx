@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Sparkles, Zap, Download, Star, ArrowRight, Palette, Book, Users, Timer } from 'lucide-react';
+import { SmartLink } from '../components/SmartLink';
 
 export const HomePage = () => {
   const features = [
@@ -95,7 +95,7 @@ export const HomePage = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link
+              <SmartLink
                 to="/create"
                 className="group relative px-8 py-4 bg-gradient-to-r from-coral-500 to-purple-500 text-white rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-coral-500/25 transition-all duration-300 transform hover:scale-105"
               >
@@ -104,14 +104,14 @@ export const HomePage = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-coral-600 to-purple-600 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-              </Link>
+              </SmartLink>
               
-              <Link
+              <SmartLink
                 to="/templates"
                 className="px-8 py-4 bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-700 rounded-xl font-semibold text-lg hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:scale-105"
               >
                 Browse Templates
-              </Link>
+              </SmartLink>
             </div>
 
             <div className="flex items-center justify-center space-x-8 text-sm text-gray-500">
@@ -206,13 +206,13 @@ export const HomePage = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Link
+            <SmartLink
               to="/templates"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-white border border-gray-200 text-gray-700 rounded-xl font-semibold hover:bg-gray-50 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
               <span>View All Templates</span>
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </SmartLink>
           </div>
         </div>
       </section>
@@ -267,7 +267,7 @@ export const HomePage = () => {
               Join thousands of creators who are already using ColorCraft AI to bring their ideas to life
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link
+              <SmartLink
                 to="/create"
                 className="group px-8 py-4 bg-white text-coral-600 rounded-xl font-semibold text-lg hover:bg-gray-50 hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               >
@@ -275,13 +275,13 @@ export const HomePage = () => {
                   <span>Start Creating Now</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
-              </Link>
-              <Link
+              </SmartLink>
+              <SmartLink
                 to="/templates"
                 className="px-8 py-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-xl font-semibold text-lg hover:bg-white/30 transition-all duration-300 transform hover:scale-105"
               >
                 Browse Templates
-              </Link>
+              </SmartLink>
             </div>
           </div>
         </div>

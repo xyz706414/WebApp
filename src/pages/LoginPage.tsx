@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
+import { SmartLink } from '../components/SmartLink';
 
 export const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -34,12 +35,12 @@ export const LoginPage = () => {
       <div className="max-w-md w-full space-y-8">
         {/* Header */}
         <div className="text-center">
-          <Link to="/" className="inline-flex items-center space-x-2 group mb-8">
+          <SmartLink to="/" className="inline-flex items-center space-x-2 group mb-8">
             <div className="w-10 h-10 bg-gradient-to-br from-coral-500 to-purple-500 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
               <span className="text-white font-bold text-lg">C</span>
             </div>
             <span className="text-2xl font-bold text-gray-900">ColorCraft AI</span>
-          </Link>
+          </SmartLink>
           
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
             Welcome Back
@@ -112,12 +113,12 @@ export const LoginPage = () => {
                   Remember me
                 </label>
               </div>
-              <Link
+              <SmartLink
                 to="/forgot-password"
                 className="text-sm text-coral-600 hover:text-coral-700 transition-colors duration-200"
               >
                 Forgot your password?
-              </Link>
+              </SmartLink>
             </div>
 
             {/* Submit Button */}
@@ -177,12 +178,12 @@ export const LoginPage = () => {
         <div className="text-center">
           <p className="text-gray-600">
             Don't have an account?{' '}
-            <Link
+            <SmartLink
               to="/signup"
               className="text-coral-600 font-medium hover:text-coral-700 transition-colors duration-200"
             >
               Sign up here
-            </Link>
+            </SmartLink>
           </p>
         </div>
       </div>
