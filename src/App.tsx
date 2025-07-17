@@ -29,72 +29,72 @@ const AppContent = () => {
       <main className="min-h-screen">
         <Routes>
           <Route path="/" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={500}>
+            <PageWrapper scrollToTopOnMount>
               <HomePage />
             </PageWrapper>
           } />
           <Route path="/create" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={400}>
+            <PageWrapper scrollToTopOnMount>
               <PromptPage />
             </PageWrapper>
           } />
           <Route path="/result" element={
-            <PageWrapper preserveScroll transitionDuration={300}>
+            <PageWrapper preserveScroll>
               <ResultPage />
             </PageWrapper>
           } />
           <Route path="/templates" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={400}>
+            <PageWrapper scrollToTopOnMount>
               <TemplatesPage />
             </PageWrapper>
           } />
           <Route path="/account" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={400}>
+            <PageWrapper scrollToTopOnMount>
               <AccountPage />
             </PageWrapper>
           } />
           <Route path="/history" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={400}>
+            <PageWrapper scrollToTopOnMount>
               <HistoryPage />
             </PageWrapper>
           } />
           <Route path="/about" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={500}>
+            <PageWrapper scrollToTopOnMount>
               <AboutPage />
             </PageWrapper>
           } />
           <Route path="/contact" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={400}>
+            <PageWrapper scrollToTopOnMount>
               <ContactPage />
             </PageWrapper>
           } />
           <Route path="/privacy" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={400}>
+            <PageWrapper scrollToTopOnMount>
               <PrivacyPage />
             </PageWrapper>
           } />
           <Route path="/terms" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={400}>
+            <PageWrapper scrollToTopOnMount>
               <TermsPage />
             </PageWrapper>
           } />
           <Route path="/faq" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={400}>
+            <PageWrapper scrollToTopOnMount>
               <FAQPage />
             </PageWrapper>
           } />
           <Route path="/onboarding" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={600}>
+            <PageWrapper scrollToTopOnMount>
               <OnboardingPage />
             </PageWrapper>
           } />
           <Route path="/login" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={500}>
+            <PageWrapper scrollToTopOnMount>
               <LoginPage />
             </PageWrapper>
           } />
           <Route path="/signup" element={
-            <PageWrapper scrollToTopOnMount transitionDuration={500}>
+            <PageWrapper scrollToTopOnMount>
               <SignupPage />
             </PageWrapper>
           } />
