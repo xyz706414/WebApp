@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Menu, X, Palette, User, History, Book, HelpCircle } from 'lucide-react';
+import { SmartLink } from './SmartLink';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
+          <SmartLink to="/" className="flex items-center space-x-2 group">
             <div className="relative">
               <div className="w-8 h-8 bg-gradient-to-br from-coral-500 to-purple-500 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                 <Palette className="w-5 h-5 text-white" />
@@ -29,12 +30,12 @@ export const Navigation = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-coral-500 to-purple-500 rounded-lg blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
             </div>
             <span className="text-xl font-bold text-gray-900">ColorCraft AI</span>
-          </Link>
+          </SmartLink>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
+              <SmartLink
                 key={item.path}
                 to={item.path}
                 className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-200 ${
@@ -45,25 +46,25 @@ export const Navigation = () => {
               >
                 {item.icon && <item.icon className="w-4 h-4" />}
                 <span className="font-medium">{item.label}</span>
-              </Link>
+              </SmartLink>
             ))}
           </div>
 
           {/* User Menu */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
+            <SmartLink
               to="/account"
               className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:text-coral-600 hover:bg-coral-50 transition-all duration-200"
             >
               <User className="w-4 h-4" />
               <span className="font-medium">Account</span>
-            </Link>
-            <Link
+            </SmartLink>
+            <SmartLink
               to="/create"
               className="px-6 py-2 bg-gradient-to-r from-coral-500 to-purple-500 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-coral-500/25 transition-all duration-300 transform hover:scale-105"
             >
               Create Now
-            </Link>
+            </SmartLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -80,7 +81,7 @@ export const Navigation = () => {
           <div className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur-sm">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
-                <Link
+                <SmartLink
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
@@ -92,24 +93,24 @@ export const Navigation = () => {
                 >
                   {item.icon && <item.icon className="w-4 h-4" />}
                   <span className="font-medium">{item.label}</span>
-                </Link>
+                </SmartLink>
               ))}
               <div className="border-t border-gray-200 pt-3 mt-3">
-                <Link
+                <SmartLink
                   to="/account"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center space-x-2 px-3 py-3 rounded-lg text-gray-600 hover:text-coral-600 hover:bg-coral-50 transition-all duration-200"
                 >
                   <User className="w-4 h-4" />
                   <span className="font-medium">Account</span>
-                </Link>
-                <Link
+                </SmartLink>
+                <SmartLink
                   to="/create"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-center mt-2 mx-3 px-4 py-3 bg-gradient-to-r from-coral-500 to-purple-500 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300"
                 >
                   Create Now
-                </Link>
+                </SmartLink>
               </div>
             </div>
           </div>
