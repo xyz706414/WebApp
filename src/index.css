@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ensure smooth page transitions don't interfere with scroll restoration */
+@layer base {
+  html {
+    scroll-behavior: auto; /* Let our scroll restoration handle smooth scrolling */
+  }
+  
+  /* Prevent flash of unstyled content during transitions */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Custom transition utilities for enhanced page transitions */
+@layer utilities {
+  .transition-fade-in {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-slide-up {
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
