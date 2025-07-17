@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Menu, X, Palette, User, History, Book, HelpCircle } from 'lucide-react';
 import { SmartLink } from './SmartLink';
-import { LoadingBar } from './LoadingBar';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,8 +18,7 @@ export const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-40 shadow-sm">
-      <LoadingBar />
+    <nav className="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
